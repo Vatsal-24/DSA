@@ -1,4 +1,4 @@
-// bfs for cycle detection
+// bfs for cycle detection in undirected graph
 bool BFS(int src,int V,vector<int> adj[],vector<int> &visited){
     queue<pair<int,int>> q;
     
@@ -24,7 +24,6 @@ bool BFS(int src,int V,vector<int> adj[],vector<int> &visited){
 }
 
 bool isCycle(int V, vector<int> adj[]) {
-    // Code here
     vector<int> visited(V+1,0);
     for(int i=0;i<V;i++){
         if(!visited[i])

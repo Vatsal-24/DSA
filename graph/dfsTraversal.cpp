@@ -1,8 +1,6 @@
 // ***dfs***
 vector<int> dfsUtil(vector<int> adj[], int V, vector<int>&dfs, vector<int>&vis)
 {
-    if(!vis[V])
-    {
         dfs.push_back(V);
         vis[V] = 1;
         for(auto it: adj[V])
@@ -12,7 +10,6 @@ vector<int> dfsUtil(vector<int> adj[], int V, vector<int>&dfs, vector<int>&vis)
                 dfsUtil(adj, it, dfs, vis);
             }
         }
-    }
     return dfs;
 }
 
