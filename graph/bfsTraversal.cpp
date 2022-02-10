@@ -10,8 +10,8 @@ vector<int> bfsOfGraph(int V, vector<int> adj[]) {
             if(!vis[i])
             {
                 queue<int>q;
-                q.push(0);
-                vis[0]=1;
+                q.push(i);
+                vis[i]=1;
                 while(!q.empty())
                 {
                     int a = q.front();

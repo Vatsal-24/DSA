@@ -1,5 +1,5 @@
 // ***dfs***
-vector<int> dfsUtil(vector<int> adj[], int V, vector<int>&dfs, vector<int>&vis)
+void dfsUtil(vector<int> adj[], int V, vector<int>&dfs, vector<int>&vis)
 {
         dfs.push_back(V);
         vis[V] = 1;
@@ -10,14 +10,17 @@ vector<int> dfsUtil(vector<int> adj[], int V, vector<int>&dfs, vector<int>&vis)
                 dfsUtil(adj, it, dfs, vis);
             }
         }
-    return dfs;
 }
 
 vector<int> dfsOfGraph(int V, vector<int> adj[]) {
     
     vector<int>dfs;
     vector<int>vis(V,0);
-    
-    return dfsUtil(adj, 0, dfs, vis);
+    fot(int i=0;i<=V;i++)
+    {
+        if(!vis[i])
+            dfsUtil(adj, i, dfs, vis);
+    }
+    return dfs;    
 }
 
