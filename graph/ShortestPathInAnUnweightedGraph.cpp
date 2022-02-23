@@ -1,9 +1,9 @@
-void printGraph(vector<int> adj[], int n, int src)
+vector<int> printGraph(vector<int> adj[], int n, int src)
 {
     vector<int>dis(n,INT_MAX);
     queue<int>q;
     q.push(src);
-    dis[0] = 1;
+    dis[0] = 0;
     
     while(!q.empty())
     {
