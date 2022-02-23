@@ -31,9 +31,9 @@ int main(){
 		{
 			int next = it.first;
 			int nextDis = it.second;
-			if(dis[next]>dis[parent] + nextDis)
+			if(dis[next]>distance + nextDis)
 			{
-				dis[next] = dis[parent] + nextDis;
+				dis[next] = distance + nextDis;
 				pq.push({dis[next], next});
 			}
 			
